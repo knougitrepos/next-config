@@ -8,5 +8,5 @@ resources:
 
 images:
   - name: next-app
-    newName: ghcr.io/OWNER/next
+    newName: ghcr.io/knougitrepos/next
     newTag: latest
