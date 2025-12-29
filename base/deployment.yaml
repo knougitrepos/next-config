@@ -6,7 +6,7 @@ metadata:
     app: next-app
 spec:
   replicas: 1
-  revisionHistoryLimit: 3 # 이전 버전을 3개까지만 보관 (기본값: 10)
+  revisionHistoryLimit: 2 # 이전 버전을 2개까지만 보관 (기본값: 10)
   selector:
     matchLabels:
       app: next-app
