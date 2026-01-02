@@ -13,4 +13,4 @@ patches:
 images:
   - name: next-app
     newName: ghcr.io/knougitrepos/next
-    newTag: master-c1684a9-20260102112231
+    newTag: master-1735b94-20260102113126
