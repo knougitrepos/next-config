@@ -7,6 +7,8 @@ metadata:
 spec:
   replicas: 1
   revisionHistoryLimit: 1 # 이전 버전을 1개까지만 보관 (기본값: 10)
+  # strategy:
+  #   type: Recreate # SQLite 사용 시 동시 Pod 방지
   selector:
     matchLabels:
       app: next-app
