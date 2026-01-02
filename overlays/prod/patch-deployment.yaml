@@ -8,6 +8,9 @@ spec:
     spec:
       containers:
         - name: next-app
+          envFrom:
+            - secretRef:
+                name: next-db-secret
           resources:
             requests:
               memory: "256Mi"
