@@ -6,7 +6,6 @@ namespace: next-prod
 resources:
   - ../../base
   - namespace.yaml
-  - secret.yaml
 
 patches:
   - path: patch-deployment.yaml
@@ -14,4 +13,4 @@ patches:
 images:
   - name: next-app
     newName: ghcr.io/knougitrepos/next
-    newTag: master-cf317e0-20260102123257
+    newTag: master-ac21df6-20260102125550
