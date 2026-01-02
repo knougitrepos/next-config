@@ -9,6 +9,8 @@ spec:
       containers:
         - name: next-app
           envFrom:
+            - configMapRef:
+                name: next-config
             - secretRef:
                 name: next-db-secret
           resources:
