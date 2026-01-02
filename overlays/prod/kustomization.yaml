@@ -6,6 +6,7 @@ namespace: next-prod
 resources:
   - ../../base
   - namespace.yaml
+  - secret.yaml
 
 patches:
   - path: patch-deployment.yaml
