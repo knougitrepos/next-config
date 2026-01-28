@@ -48,4 +48,13 @@ spec:
               port: 3000
             initialDelaySeconds: 15
             periodSeconds: 30
+          volumeMounts:
+            - name: upload-storage
+              mountPath: /app/uploads
+      volumes:
+        - name: upload-storage
+          hostPath:
+            # Docker Desktop for Windows: C: -> /run/desktop/mnt/host/c
+            path: /run/desktop/mnt/host/c/git/next/uploads
+            type: DirectoryOrCreate
       restartPolicy: Always
