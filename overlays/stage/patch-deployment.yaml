@@ -10,8 +10,8 @@ spec:
         - name: next-app
           resources:
             requests:
-              memory: "128Mi"
-              cpu: "100m"
+              memory: "2Gi"
+              cpu: "1500m"
             limits:
-              memory: "384Mi"
-              cpu: "300m"
+              memory: "6Gi"
+              cpu: "3000m"
