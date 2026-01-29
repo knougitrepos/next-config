@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+﻿apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: next-app
@@ -6,9 +6,7 @@ metadata:
     app: next-app
 spec:
   replicas: 1
-  revisionHistoryLimit: 1 # 이전 버전을 1개까지만 보관 (기본값: 10)
-  # strategy:
-  #   type: Recreate # SQLite 사용 시 동시 Pod 방지
+  revisionHistoryLimit: 1
   selector:
     matchLabels:
       app: next-app
@@ -19,7 +17,7 @@ spec:
     spec:
       containers:
         - name: next-app
-          image: next-app # Kustomize가 오버라이드
+          image: next-app
           ports:
             - containerPort: 3000
               protocol: TCP
@@ -53,8 +51,6 @@ spec:
               mountPath: /app/uploads
       volumes:
         - name: upload-storage
-          hostPath:
-            # Docker Desktop for Windows: C: -> /run/desktop/mnt/host/c
-            path: /run/desktop/mnt/host/c/git/next/uploads
-            type: DirectoryOrCreate
+          persistentVolumeClaim:
+            claimName: next-upload-pvc
       restartPolicy: Always
