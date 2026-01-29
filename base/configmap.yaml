@@ -9,3 +9,13 @@ data:
   ARGOCD_SERVER: "https://argocd-server.argocd.svc.cluster.local"
   ARGOCD_USERNAME: "admin"
   ARGOCD_PASSWORD: "qkrehdcks"
+
+  # MinIO / S3 설정
+  # K8s Pod (Next.js) -> Host Docker (MinIO) 접근을 위해 host.docker.internal 사용 (Windows)
+  MINIO_INTERNAL_ENDPOINT: "http://host.docker.internal:9000"
+  S3_ENDPOINT: "http://host.docker.internal:9000"
+  S3_ACCESS_KEY: "admin"
+  S3_SECRET_KEY: "qkrehdcks"
+  S3_REGION: "us-east-1"
+  S3_BUCKET_NAME: "youtube-media"
+  REID_BUCKET_NAME: "reid-data"
