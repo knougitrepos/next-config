@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: next-config
 data:
-  NODE_ENV: "production"
+  NODE_ENV: "development"
   NEXT_TELEMETRY_DISABLED: "1"
   # ArgoCD 설정 - Kubernetes 내부 서비스 주소 사용
   ARGOCD_SERVER: "https://argocd-server.argocd.svc.cluster.local"
