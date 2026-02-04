@@ -34,7 +34,6 @@ spec:
             limits:
               memory: "2Gi"
               cpu: "1000m"
-              nvidia.com/gpu: "1"
           livenessProbe:
             httpGet:
               path: /
